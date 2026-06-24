@@ -1,0 +1,517 @@
+/* ========================================== 
+   1. VARIABLES DE COULEURS ET THÈME HARMONISÉ
+   ========================================== */
+:root {
+  --primary: #4f46e5; /* Indigo moderne */
+  --secondary: #06b6d4; /* Cyan vibrant */
+  --accent: #f59e0b; /* Ambre pour les détails */
+  --bg-light: #f8fafc; /* Fond clair */
+  --card-light: #ffffff;
+  --text-light: #475569;
+  --text-main: #1e293b;
+
+  /* Variables Mode Sombre Commun */
+  --bg-dark: #0f172a;
+  --card-dark: #1e293b;
+  --text-dark: #f8fafc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  padding: 40px 20px;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ==========================================
+   2. BOUTONS INTERACTIFS
+   ========================================== */
+.theme-btn {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+  transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: translateY(-2px);
+  background: #4338ca;
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.top-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* ==========================================
+   3. EN-TÊTE (HEADER) ET GESTION PHOTO
+   ========================================== */
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, #312e81 100%);
+  color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  margin-bottom: 35px;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+/* Effet au survol de la photo identique pour les deux */
+.profile-pic:hover {
+  transform: scale(1.08) rotate(3deg);
+}
+
+.header-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.header-text h3 {
+  color: var(--secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.coordinates {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+
+nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* ==========================================
+   4. STRUCTURE DES SECTIONS & CARTES
+   ========================================== */
+section {
+  background: var(--card-light);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-2px);
+}
+
+h2 {
+  color: var(--text-main);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+article {
+  padding: 15px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-left: 4px solid var(--primary);
+}
+
+article h3 {
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.two-columns {
+  display: flex;
+  gap: 30px;
+}
+.col {
+  flex: 1;
+}
+.col h3 {
+  margin-bottom: 10px;
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+ul {
+  list-style-position: inside;
+}
+li {
+  margin-bottom: 6px;
+}
+
+/* ==========================================
+   5. JAUGES DE COMPÉTENCES
+   ========================================== */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+} /* --- Styles pour les Compétences --- */
+#competences {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.competence-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.competence-category {
+  flex: 1;
+  min-width: 250px;
+}
+
+.competence-category h3 {
+  color: #2c3e50;
+  border-bottom: 2px solid #0835ff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.competence-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.competence-category li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* --- Styles pour les Projets --- */
+#projets {
+  margin: 30px 0;
+  padding: 20px;
+}
+
+.projet-card {
+  background: #ffffff;
+  border-left: 5px solid #3498db;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projet-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.projet-card p {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.projet-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.projet-card li {
+  margin-bottom: 5px;
+  /* --- Styles pour les Projets --- */
+  #projets {
+    margin: 30px 0;
+    padding: 20px;
+  }
+
+  .projet-card {
+    background: #ffffff;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .projet-card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+
+  .projet-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  .projet-card ul {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  .projet-card li {
+    margin-bottom: 5px;
+  }
+}
+
+.skill-block span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ==========================================
+   6. FORMULAIRE DE CONTACT
+   ========================================== */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form-group label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  background-color: #fff;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+#contact-form button {
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact-form button:hover {
+  background: #4338ca;
+}
+.error-msg,
+.success-msg {
+  margin-top: 5px;
+  font-weight: 600;
+  display: none;
+}
+.error-msg {
+  color: #ef4444;
+}
+.success-msg {
+  color: #10b981;
+}
+
+/* ==========================================
+   7. FOOTER
+   ========================================== */
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  color: #64748b;
+  font-size: 0.85rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ==========================================
+   8. COMPORTEMENT MODE SOMBRE HARMONISÉ
+   ========================================== */
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body.dark-mode section {
+  background-color: var(--card-dark);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode h2,
+body.dark-mode .col h3,
+body.dark-mode article h3 {
+  color: #ffffff;
+}
+
+body.dark-mode article {
+  background: #1e293b;
+}
+body.dark-mode .progress-bar {
+  background-color: #334155;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #1e293b;
+  color: white;
+  border-color: #475569;
+}
+
+body.dark-mode footer {
+  border-top-color: #334155;
+}
+
+/* ==========================================
+   9. RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+  .two-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 15px;
+    text-align: center;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+    margin: 0 auto;
+  }
+}

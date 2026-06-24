@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Interactif - Khoudia Diop</title>
+    <!-- POLICES -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Bouton Mode Sombre / Mode Clair -->
+    <button id="theme-toggle" class="theme-btn">🌙 Mode Sombre</button>
+
+    <header>
+      <div class="header-container">
+        <!-- Gestion de  photo de profil -->
+        <img
+          src="./Images/MOI.jpeg"
+          alt="Photo de profil de Khoudia Diop"
+          class="profile-pic"
+        />
+        <div class="header-text">
+          <h1>Khoudia Diop</h1>
+
+          <h2>Etudiante en Licence 2 Informatique</h2>
+          <p class="coordinates">
+            📍Yeumbeul, Dakar, Sénégal | 📞 +221 77 1248004| ✉️
+            11diopkhoudia@gmail.com
+          </p>
+        </div>
+      </div>
+
+      <nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">Présentation</a></li>
+          <li><a href="#formation">Formation</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#experiences">Expériences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#languages">Langues & Intérêts</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>Présentation</h2>
+        <p>
+          Passionnée par les technologies du numérique le developpement des
+          applications et d'administrer les réseaux et, je suis étudiante en
+          Licence 2 Informatique à l'Université Iba Der Thiam de Thiès.
+          Rigoureuse et investie, j'aime configurer des reseaux ,concevoir des
+          interfaces web , dynamiques et centrées sur l'expérience utilisateur.
+        </p>
+      </section>
+
+      <section id="formation">
+        <h2>Formation</h2>
+        <ul>
+          <li>
+            <strong>2025 - Présent :</strong> Licence 2 en Informatique
+            Université Iba Der Thiam de Thiès
+          </li>
+          <li>
+            <strong>2024 - 2025 :</strong> Licence 1 en Informatique –
+            Université Iba Der Thiam de Thiès
+          </li>
+          <li>
+            <strong>2024 :</strong> Baccalauréat Scientifique (S2) – Lycée EL
+            Hadj Ibrahima DIOP Yeumbeul
+          </li>
+          <li><strong>2021:</strong> BFEM – CollègeCem MOMAR Marème DIOP</li>
+        </ul>
+      </section>
+
+      <!-- Compétences -->
+      <section id="compétences">
+        <h2>Compétences Techniques</h2>
+        <div class="competence-grid">
+          <!-- Bloc Développement Web -->
+          <div class="competence-category">
+            <h3>Développement Web</h3>
+            <ul>
+              <li><strong>Langages :</strong> HTML5, CSS3, JavaScript</li>
+              <li><strong>Bases de données :</strong> SQL (MySQL)</li>
+              <li><strong>Outils :</strong> GitHub, Netlify</li>
+            </ul>
+          </div>
+
+          <!-- Bloc Réseaux -->
+          <div class="competence-category">
+            <h3>Réseaux & Infrastructure</h3>
+            <ul>
+              <li>
+                <strong>Simulation :</strong> Configuration de topologies sous
+                Cisco Packet Tracer.
+              </li>
+              <li>
+                <strong>Concepts :</strong> Bases du routage et de la
+                commutation (Switching & Routing).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="experiences">
+        <h2>Expériences Professionnelles</h2>
+
+        <!-- Expérience 1  -->
+        <article class="experience-item">
+          <h3>entrepreneur_Gérante de boutique en ligne</h3>
+          <p class="date">Depuis Décembre 2024 | Activité Indépendante</p>
+          <p>
+            Gestion Opérationnelle & Logistique : Gestion complète du cycle de
+            vente, de la gestion des stocks à la coordination des livraisons
+            partout au Sénégal..
+          </p>
+          <ul>
+            <li>
+              <strong>Stratégie de Vente & Communication Digitale :</strong>
+              <p>
+                Création et publication de contenus visuels pour animer les
+                réseaux sociaux et attirer une clientèle cible.
+              </p>
+            </li>
+            <li>
+              <strong> Relation Client & Administration :</strong>
+              Gestion des commandes, suivi des paiements et service client
+              personnalisé pour assurer la fidélisation.
+            </li>
+            <li>
+              <strong>Gestion numérique :</strong> Planification et création de
+              publications visuelles sur les réseaux sociaux.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Expérience 2 : Projet académique-->
+        <article class="experience-item">
+          <h3>Développement d'un Portfolio Dynamique (Projet Universitaire)</h3>
+          <p class="date">Mai 2026 - Juin 2026</p>
+          <p>
+            Conception et intégration complète d'un CV en ligne interactif pour
+            valider l'unité d'enseignement de Développement Web.
+          </p>
+          <ul>
+            <li>
+              <strong>Structure :</strong> Utilisation d'un code HTML5
+              sémantique et mise en page responsive avec CSS.
+            </li>
+            <li>
+              <strong>Interactivité :</strong> Implémentation en JavaScript d'un
+              mode sombre persistant, d'animations au défilement et de
+              validations de formulaires.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="projects">
+        <h2>Projets réalisés</h2>
+        <article class="project-item">
+          <h3>Gestion de Bibliothèque en C</h3>
+          <p>
+            Application console pour gérer le stock de livres, les emprunts et
+            les adhérents à l'aide de structures de données dynamiques (listes
+            chaînées).
+          </p>
+        </article>
+
+        <article class="project-item">
+          <h3>Système de Dossiers Médicaux</h3>
+          <p>
+            Modélisation et développement d'un outil de suivi pour la gestion
+            des fiches patients et la planification des rendez-vous médicaux.
+          </p>
+        </article>
+      </section>
+
+      <section id="languages">
+        <h2>Langues & Centres d'intérêt</h2>
+        <div class="two-columns">
+          <div class="col">
+            <h3>Langues</h3>
+            <ul>
+              <li>Français (Courant)</li>
+              <li>Wolof (Maternelle)</li>
+              <li>Anglais (Intermédiaire)</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Centres d'intérêt</h3>
+            <ul>
+              <li>programmation et Nouvelles technologies</li>
+              <li>lecture</li>
+              <li>Bénévolat et vie associative</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">votre nom :</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">votre email :</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit">Envoyer le message</button>
+          <p id="form-error" class="error-msg"></p>
+          <p id="form-success" class="success-msg">
+            Message envoyé avec succès !
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <button id="back-to-top" class="top-btn">↑</button>
+
+    <footer>
+      <p>© 2026 Khoudia Diop - Tous droits réservés.</p>
+      <div class="social-links">
+          <!-- mes liens GitHub et LinkedIn  -->
+  <div class="legal-mentions">
+        <a href="https://khoudiadiop2-ctrl.github.io/MonCV/" target="_blank"
+          >GitHub</a
+        >
+              <a
+          href="https://www.linkedin.com/in/khoudia-diop-5b6a0840a/"
+          target="_blank"
+          >LinkedIn</a
+        >
+          </div>
+         
+<!-- Ajout suggéré pour respecter les spécifications -->
+  <div class="legal-mentions">
+<a href="chemin/vers/mentions.html">Mentions légales</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
